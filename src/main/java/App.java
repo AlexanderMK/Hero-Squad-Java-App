@@ -22,7 +22,7 @@ public class App {
     post("/heros", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
 
-      ArrayList<Hero> heros = request.session().attribute("heros");
+      ArrayL<Hero> heros = request.session().attribute("heros");
       if (heros == null) {
       heros = new ArrayList<Hero>();
       request.session().attribute("heros", heros);
