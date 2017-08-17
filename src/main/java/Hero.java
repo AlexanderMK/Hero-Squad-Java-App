@@ -4,6 +4,7 @@ public class Hero {
 
   public Hero(String name) {
     mName = name;
+    mAge = age;
   }
 
   public String getName() {
