@@ -1,11 +1,15 @@
 <h1>Hero Squad</h1>
 
-#if ($hero)
-  <p>Current hero:</p>
-  <p>$task.getName()</p>
+#if ($heros)
+  <ul>
+    #foreach ($hero in $heros)
+      <li>$hero.getName()</li>
+    #end
+  </ul>
 #else
-  <p>No hero!</p>
+  <p>No heros!</p>
 #end
+
 
 <p>Add a new Hero:</p>
 
