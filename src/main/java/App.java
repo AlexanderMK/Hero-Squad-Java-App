@@ -31,7 +31,8 @@ public class App {
       //params for heroes form
       String name = request.queryParams("name");
       int age = Integer.parseInt(request.queryParams("age"));
-      Hero newHero = new Hero(name, age);
+      String ability = request.queryParams("abilty");
+      Hero newHero = new Hero(name, age, ability);
       heros.add(newHero);
 
       model.put("template", "templates/success.vtl");
