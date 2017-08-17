@@ -13,4 +13,8 @@ public class HeroTest {
 		assertEquals("NinjaMan", testHero.getName());
 	}
 
+  @Test
+  public void getAge_returnsAge_30() {
+    assertEquals(30, testHero.getAge());
+  }
 }
