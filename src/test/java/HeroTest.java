@@ -3,6 +3,12 @@ import static org.junit.Assert.*;
 
 public class HeroTest {
 
+
+  @Before
+	public void instanciate() {
+		testHero = new Hero("NinjaMan",  30, "Strength, speed", "cannot run");
+	}
+
   @Test
 	public void Hero_instantiatesCorrectly_true() {
 		assertTrue(testHero instanceof Hero);
@@ -16,5 +22,10 @@ public class HeroTest {
   @Test
   public void getAge_returnsAge_30() {
     assertEquals(30, testHero.getAge());
+  }
+
+  @ Test
+  public void getAbility_returnsAbility_Strength() {
+    assertEquals("Strength, speed", testHero.getAbility());
   }
 }
