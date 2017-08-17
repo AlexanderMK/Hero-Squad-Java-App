@@ -22,14 +22,14 @@ public class App {
     post("/heros", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
 
-      ArrayL<Hero> heros = request.session().attribute("heros");
+      ArrayList<Hero> heros = request.session().attribute("heros");
       if (heros == null) {
       heros = new ArrayList<Hero>();
       request.session().attribute("heros", heros);
       }
 
       String name = request.queryParams("name");
-      Hero newHero = new Hero(name);
+       newHero = new Hero(name);
       heros.add(newHero);
 
       model.put("template", "templates/success.vtl");
