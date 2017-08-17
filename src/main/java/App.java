@@ -14,7 +14,7 @@ public class App {
 
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("heros", request.session().attribute("heros"));
+      model.put("her", request.session().attribute("heros"));
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
@@ -29,7 +29,7 @@ public class App {
       }
 
       String name = request.queryParams("name");
-       newHero = new Hero(name);
+      Hero newHero = new Hero(name);
       heros.add(newHero);
 
       model.put("template", "templates/success.vtl");
