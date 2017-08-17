@@ -1,7 +1,10 @@
-public class Task {
+public class Hero {
 
-  public Hero(String description) {
-
+  public Hero(String name) {
+    mName = name;
   }
 
+  public String getName() {
+    return Name;
+  }
 }
