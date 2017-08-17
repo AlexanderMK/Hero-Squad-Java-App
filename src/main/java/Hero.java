@@ -1,8 +1,11 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Hero {
   private String mName;
   private int mAge;
 
-  public Hero(String name) {
+  public Hero(String name, int age) {
     mName = name;
     mAge = age;
   }
@@ -12,6 +15,6 @@ public class Hero {
   }
 
   public int getAge() {
-    return mAge
+    return mAge;
   }
 }
