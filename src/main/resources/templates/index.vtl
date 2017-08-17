@@ -1,5 +1,12 @@
 <h1>Hero Squad</h1>
 
+#if ($hero)
+  <p>Current hero:</p>
+  <p>$task.getName()</p>
+#else
+  <p>No hero!</p>
+#end
+
 <p>Add a new Hero:</p>
 
 <form action="/heros" method="post">
