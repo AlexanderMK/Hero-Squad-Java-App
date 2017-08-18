@@ -55,4 +55,13 @@ public class SquadTest {
   public void getHeroes_initiallyReturnsEmptyList_Arraylist() {
     assertEquals(0, testSquad.getHeroes().size());
   }
+
+  //adds heros to a squad
+  @Test
+  public void addHeroes_addHeroToList_true(){
+    Squad.clear();
+    Hero testHero = new Hero("NinjaMan",  30, "Strength, speed", "cannot run");
+    testSquad.addHero(testHero);
+    assertTrue(testSquad.getHeroes().contains(testHero));
+  }
 }
