@@ -32,7 +32,8 @@ public class App {
       String name = request.queryParams("name");
       int age = Integer.parseInt(request.queryParams("age"));
       String ability = request.queryParams("abilty");
-      Hero newHero = new Hero(name, age, ability);
+      String weakness = request.queryParams("weakness");
+      Hero newHero = new Hero(name, age, ability, weakness);
       heros.add(newHero);
 
       model.put("template", "templates/success.vtl");
