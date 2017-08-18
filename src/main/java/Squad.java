@@ -6,6 +6,7 @@ public class Squad {
   public Squad(String name, int maxSize) {
     mName = name;
     mMaxSize = maxSize;
+    mReason = reason;
   }
 
   public String getName() {
