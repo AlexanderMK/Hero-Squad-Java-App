@@ -49,6 +49,11 @@ public class Squad {
 
   //returns a list of heroes in a squad
   public List<Hero> getHeros() {
-    return mHero;
+    return mHeros;
+  }
+
+  // adds heroes to a Squad
+	public void addHero(Hero hero) {
+			mHeros.add(hero);
   }
 }
