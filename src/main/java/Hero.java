@@ -5,8 +5,9 @@ public class Hero {
   private String mName;
   private int mAge;
   private String mAbility;
+  private String mWeakness;
 
-  public Hero(String name, int age) {
+  public Hero(String name, int age, String ability) {
     mName = name;
     mAge = age;
     mAbility = ability;
