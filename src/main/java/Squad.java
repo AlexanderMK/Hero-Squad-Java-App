@@ -1,8 +1,9 @@
 public class Squad {
   private String mName;
   private int mMaxSize;
+  private String mReason;
 
-  public Squad(String name) {
+  public Squad(String name, int maxSize) {
     mName = name;
     mMaxSize = maxSize;
   }
@@ -14,4 +15,7 @@ public class Squad {
   //returns the maximum size
 	public int getMaximumSize() {
 		return mMaxSize;
+  }
+
+
 }
