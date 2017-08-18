@@ -11,6 +11,7 @@ public class Hero {
     mName = name;
     mAge = age;
     mAbility = ability;
+    mWeakness = weakness;
   }
 
   public String getName() {
