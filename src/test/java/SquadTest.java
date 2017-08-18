@@ -20,4 +20,10 @@ public class SquadTest {
 	public void getMaximumSize_teamInstantiatesWithTeam_4() {
 		assertEquals(4, testSquad.getMaximumSize());
 	}
+
+  //reason for joining the team
+	@Test
+	public void getReason_teamInstantiatesWithTeam_ComputerIlliteracy() {
+		assertEquals("computer illiteracy", testSquad.getReason());
+	}
 }
