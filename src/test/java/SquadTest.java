@@ -8,4 +8,10 @@ public class SquadTest {
   public void Squad_instantiatesCorrectly_true() {
     assertTrue(testSquad instanceof Squad);
   }
+
+  //squad name
+  @Test
+  public void getName_teamInstantiatesWith_NinjaSquad() {
+    assertEquals("NinjaSquad", testSquad.getName());
+  }
 }
