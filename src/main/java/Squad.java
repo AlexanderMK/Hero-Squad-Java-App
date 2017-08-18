@@ -39,4 +39,9 @@ public class Squad {
   public void clear() {
     instances.clear();
   }
+
+  //returning the id of a squad
+  public int getId() {
+    return mId;
+  }
 }
