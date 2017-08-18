@@ -48,5 +48,24 @@ public class App {
       model.put("template", "templates/hero.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
+    //retrieves a form to add new squad form
+		get("/squads/new", (request, response) -> {
+			Map<String, Object> model = new HashMap<String, Object>();
+			model.put ("template", "templates/squads-form.vtl");
+			return new ModelAndView(model, layout);
+		}, new VelocityTemplateEngine());
+
+    post("/squads", (request, response) -> {
+			Map<String, Object> model = new HashMap<String, Object>();
+			String team = request.queryParams("team");
+			String reason = request.queryParams("reason");
+			Integer max = Integer.parseInt(request.queryParams("max"));
+			Squad newSquad = new Squad(team, max, reason);
+			model.put("template", "templates/squad-success.vtl");
+			// System.out.println(newSquad);
+			// response.redirect("/squads/"+newSquad.getId());
+			return new ModelAndView(model, layout);
+		}, new VelocityTemplateEngine());
   }
 }
