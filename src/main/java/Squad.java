@@ -7,7 +7,7 @@ public class Squad {
   private String mReason;
   private static List<Squad> instances = new ArrayList<Squad>();
   private int mId;
-  private List<Task> mTasks
+  private List<Hero> mHeros;
 
   public Squad(String name, int maxSize, String reason) {
     mName = name;
@@ -15,6 +15,7 @@ public class Squad {
     mReason = reason;
     instances.add(this);
     mId = instances.size();
+    mHeros = newArrayList<Hero>();
   }
 
   public String getName() {
