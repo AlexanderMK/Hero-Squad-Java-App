@@ -10,4 +10,8 @@ public class Squad {
   public String getName() {
     return mName;
   }
+
+  //returns the maximum size
+	public int getMaximumSize() {
+		return mMaxSize;
 }
