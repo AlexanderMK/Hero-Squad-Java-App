@@ -6,12 +6,14 @@ public class Hero {
   private int mAge;
   private String mAbility;
   private String mWeakness;
+  private static List<Hero> instances = new ArrayList<Hero>();
 
-  public Hero(String name, int age, String ability) {
+  public Hero(String name, int age, String ability, String weakness) {
     mName = name;
     mAge = age;
     mAbility = ability;
     mWeakness = weakness;
+    instances.add(this);
   }
 
   public String getName() {
@@ -27,6 +29,6 @@ public class Hero {
   }
 
   public String getWeakness() {
-    return nWeakness;
+    return mWeakness;
   }
 }
