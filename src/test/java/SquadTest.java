@@ -41,4 +41,10 @@ public class SquadTest {
     Squad.clear();
     assertEquals(Squad.all().size(), 0);
   }
+
+  // the first squad instantiates with id 1, then 2, etc
+  @Test
+  public void getId_squadInstantiatesWithAnId_1() {
+    assertEquals(1, testSquad.getId());
+  }
 }
