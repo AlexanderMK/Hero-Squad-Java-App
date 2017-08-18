@@ -27,7 +27,8 @@ public class Squad {
 		return mReason;
 	}
 
-
-
-
+  //returning all instances
+  public static List<Squad> all() {
+    return instances;
+  }
 }
