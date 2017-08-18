@@ -14,4 +14,10 @@ public class SquadTest {
   public void getName_teamInstantiatesWith_NinjaSquad() {
     assertEquals("NinjaSquad", testSquad.getName());
   }
+
+  //maximum size of the squad
+	@Test
+	public void getMaximumSize_teamInstantiatesWithTeam_4() {
+		assertEquals(4, testSquad.getMaximumSize());
+	}
 }
