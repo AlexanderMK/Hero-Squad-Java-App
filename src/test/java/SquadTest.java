@@ -47,4 +47,11 @@ public class SquadTest {
   public void getId_squadInstantiatesWithAnId_1() {
     assertEquals(1, testSquad.getId());
   }
+
+  //locatess a squad with a certain id
+  @Test
+  public void find_returnsSquadWithSameId_testSquadTwo() {
+		Squad testSquadTwo = new Squad("X-men", 5, "computer illiteracy");
+    assertEquals(Squad.find(testSquadTwo.getId()), testSquadTwo);
+  }
 }
