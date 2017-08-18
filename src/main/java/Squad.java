@@ -15,7 +15,7 @@ public class Squad {
     mReason = reason;
     instances.add(this);
     mId = instances.size();
-    mHeros = newArrayList<Hero>();
+    mHeros = new ArrayList<Hero>();
   }
 
   public String getName() {
@@ -47,4 +47,8 @@ public class Squad {
     return mId;
   }
 
+  //returns a list of heroes in a squad
+  public List<Hero> getHeros() {
+    return mHero;
+  }
 }
