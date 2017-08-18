@@ -11,6 +11,7 @@ public class Squad {
     mName = name;
     mMaxSize = maxSize;
     mReason = reason;
+    instances.add(this);
   }
 
   public String getName() {
