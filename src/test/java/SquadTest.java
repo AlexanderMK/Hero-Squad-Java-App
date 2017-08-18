@@ -3,6 +3,8 @@ import static org.junit.Assert.*;
 
 public class SquadTest {
 
+  //runs before every test to instantiate squad object
+
   //instances
   @Test
   public void Squad_instantiatesCorrectly_true() {
@@ -48,10 +50,9 @@ public class SquadTest {
     assertEquals(1, testSquad.getId());
   }
 
-  //locatess a squad with a certain id
+  //instantiating a Squad with an empty heroes List
   @Test
-  public void find_returnsSquadWithSameId_testSquadTwo() {
-		Squad testSquadTwo = new Squad("X-men", 5, "computer illiteracy");
-    assertEquals(Squad.find(testSquadTwo.getId()), testSquadTwo);
+  public void getHeroes_initiallyReturnsEmptyList_Arraylist() {
+    assertEquals(0, testSquad.getHeroes().size());
   }
 }
