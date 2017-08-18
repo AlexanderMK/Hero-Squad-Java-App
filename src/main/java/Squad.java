@@ -18,5 +18,10 @@ public class Squad {
 		return mMaxSize;
   }
 
+  //returns reason to join a squad
+	public String getReason() {
+		return mReason;
+	}
+
 
 }
