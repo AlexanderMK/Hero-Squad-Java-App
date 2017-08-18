@@ -4,9 +4,6 @@ import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
 
-import java.util.ArrayList;
-
-
 public class App {
   public static void main(String[] args) {
     staticFileLocation("/public");
@@ -14,33 +11,42 @@ public class App {
 
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("heros", request.session().attribute("heros"));
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
+    get("heros/new", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/hero-form.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    get("/heros", (request, response) -> {
+     Map<String, Object> model = new HashMap<String, Object>();
+     model.put("heros", Hero.all());
+     model.put("template", "templates/heros.vtl");
+     return new ModelAndView(model, layout);
+   }, new VelocityTemplateEngine());
+
+
     post("/heros", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-
-      ArrayList<Hero> heros = request.session().attribute("heros");
-      if (heros == null) {
-      heros = new ArrayList<Hero>();
-      request.session().attribute("heros", heros);
-      }
-
       //params for heroes form
       String name = request.queryParams("name");
       int age = Integer.parseInt(request.queryParams("age"));
       String ability = request.queryParams("abilty");
       String weakness = request.queryParams("weakness");
       Hero newHero = new Hero(name, age, ability, weakness);
-      heros.add(newHero);
-
       model.put("template", "templates/success.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-
-
+    get("/heros/:id", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      Hero hero = Hero.find(Integer.parseInt(request.params(":id")));
+      model.put("hero", hero);
+      model.put("template", "templates/hero.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
   }
 }
