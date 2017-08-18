@@ -5,6 +5,7 @@ public class Squad {
   private String mName;
   private int mMaxSize;
   private String mReason;
+  private static List<Squad> instances = new ArrayList<Squad>();
 
   public Squad(String name, int maxSize, String reason) {
     mName = name;
