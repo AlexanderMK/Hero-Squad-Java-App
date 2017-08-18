@@ -1,21 +1,11 @@
-<h1>Hero Squad</h1>
+<h1>Welcome to the Hero Squad Application</h1>
 
-#if ($heros)
-  <ul>
-    #foreach ($hero in $heros)
-      <li>$hero.getName()</li>
-    #end
-  </ul>
-#else
-  <p>No heros!</p>
-#end
+<ul>
+  <li><a href="/heros/new">Add a new Hero</a></li>
+  <li><a href="/heros">View all current Heroes</a></li>
+</ul>
 
-
-<p>Add a new Hero:</p>
-
-<form action="/heros" method="post">
-  <label for="name">Hero Name</label>
-  <input id="name" name="name" type="text">
-
-  <button type="submit" class="btn btn-default">Add Hero</button>
-</form>
+<ul>
+  <li><a href="/categories">View Category List</a></li>
+  <li><a href="/categories/new">Add a New Category</a></li>
+</ul>
