@@ -1,9 +1,12 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Squad {
   private String mName;
   private int mMaxSize;
   private String mReason;
 
-  public Squad(String name, int maxSize) {
+  public Squad(String name, int maxSize, String reason) {
     mName = name;
     mMaxSize = maxSize;
     mReason = reason;
@@ -22,6 +25,8 @@ public class Squad {
 	public String getReason() {
 		return mReason;
 	}
+
+
 
 
 }
