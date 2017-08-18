@@ -32,4 +32,9 @@ public class Squad {
   public static List<Squad> all() {
     return instances;
   }
+
+  //clear squad instances
+  public void clear() {
+    instances.clear();
+  }
 }
