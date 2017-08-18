@@ -28,4 +28,9 @@ public class HeroTest {
   public void getAbility_returnsAbility_Strength() {
     assertEquals("Strength, speed", testHero.getAbility());
   }
+
+  @Test
+  public void getWeakness_returnsAbility_CannotRun() {
+    assertEquals("Cannot run", testHero.getWeakness);
+  }
 }
