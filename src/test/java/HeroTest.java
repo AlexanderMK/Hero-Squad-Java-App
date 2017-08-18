@@ -46,4 +46,9 @@ public class HeroTest {
     Hero.clear();
     assertEquals(0, Hero.all().size());
   }
+
+  @Test
+  public void getId_returnsInstantiateWithAnId_1() {
+    assertEquals(1, testHero.getId());
+  }
 }
