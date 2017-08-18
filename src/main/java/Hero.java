@@ -15,7 +15,7 @@ public class Hero {
     mAbility = ability;
     mWeakness = weakness;
     instances.add(this);
-    mId = instances.size(); 
+    mId = instances.size();
 
   }
 
@@ -41,5 +41,9 @@ public class Hero {
 
   public static void clear() {
     instances.clear():
+  }
+
+  public int getId() {
+    return mId;
   }
 }
