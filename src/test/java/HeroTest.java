@@ -31,6 +31,13 @@ public class HeroTest {
 
   @Test
   public void getWeakness_returnsAbility_CannotRun() {
-    assertEquals("Cannot run", testHero.getWeakness);
+    assertEquals("cannot run", testHero.getWeakness);
+  }
+
+  @Test
+  public void all_returnsAllInstancesoOfHero_true() {
+    Hero anotherHero = new Hero("Commando", 35, "Fighter,use machinegun, getting old" );
+    assertTrue(Hero.all().contains(testHero));
+		assertTrue(Hero.all().contains(anotherHero));
   }
 }
