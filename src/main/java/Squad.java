@@ -13,6 +13,7 @@ public class Squad {
     mMaxSize = maxSize;
     mReason = reason;
     instances.add(this);
+    mId = instances.size();
   }
 
   public String getName() {
