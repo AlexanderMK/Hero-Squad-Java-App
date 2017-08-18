@@ -25,4 +25,8 @@ public class Hero {
   public String getAbility() {
     return mAbility;
   }
+
+  public String getWeakness() {
+    return nWeakness;
+  }
 }
