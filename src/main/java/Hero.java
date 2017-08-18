@@ -15,6 +15,7 @@ public class Hero {
     mAbility = ability;
     mWeakness = weakness;
     instances.add(this);
+    mId = instances.size(); 
 
   }
 
