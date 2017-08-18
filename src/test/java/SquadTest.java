@@ -26,4 +26,12 @@ public class SquadTest {
 	public void getReason_teamInstantiatesWithTeam_ComputerIlliteracy() {
 		assertEquals("computer illiteracy", testSquad.getReason());
 	}
+
+  //all instances
+  @Test
+  public void all_returnsAllInstancesOfSquad_true() {
+    Squad testSquadTwo = new Squad("X-men", 5, "computer illiteracy");
+    assertEquals(true, Squad.all().contains(testSquad));
+    assertEquals(true, Squad.all().contains(testSquadTwo));
+  }
 }
