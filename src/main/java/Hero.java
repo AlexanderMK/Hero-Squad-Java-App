@@ -40,10 +40,14 @@ public class Hero {
   }
 
   public static void clear() {
-    instances.clear():
+    instances.clear();
   }
 
   public int getId() {
     return mId;
+  }
+
+  public static Hero find(int id) {
+    return instances.get(id-1);
   }
 }
