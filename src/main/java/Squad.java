@@ -7,6 +7,7 @@ public class Squad {
   private String mReason;
   private static List<Squad> instances = new ArrayList<Squad>();
   private int mId;
+  private List<Task> mTasks
 
   public Squad(String name, int maxSize, String reason) {
     mName = name;
@@ -44,4 +45,5 @@ public class Squad {
   public int getId() {
     return mId;
   }
+
 }
