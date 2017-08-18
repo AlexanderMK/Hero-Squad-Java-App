@@ -51,4 +51,10 @@ public class HeroTest {
   public void getId_returnsInstantiateWithAnId_1() {
     assertEquals(1, testHero.getId());
   }
+
+  @Test
+  public void find_returnsHeroWithSameId_AnotherHero() {
+    Hero anotherHero = new Hero("NinjaMan", 31, "Strength, speed", "cannot run");
+    assertEquals(anotherHero.Hero.find(anotherHero.getId()));
+  }
 }
