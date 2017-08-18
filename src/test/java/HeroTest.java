@@ -40,4 +40,10 @@ public class HeroTest {
     assertTrue(Hero.all().contains(testHero));
 		assertTrue(Hero.all().contains(anotherHero));
   }
+
+  @Test
+  public void clear_emptiesAllHerosFromList_0() {
+    Hero.clear();
+    assertEquals(0, Hero.all().size());
+  }
 }
