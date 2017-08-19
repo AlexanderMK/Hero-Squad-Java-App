@@ -15,11 +15,11 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("heros/new", (request, response) -> {
-      Map<String, Object> model = new HashMap<String, Object>();
-      model.put("template", "templates/hero-form.vtl");
-      return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
+    //get("heros/new", (request, response) -> {
+    //Map<String, Object> model = new HashMap<String, Object>();
+      //model.put("template", "templates/hero-form.vtl");
+      //return new ModelAndView(model, layout);
+    //}, new VelocityTemplateEngine());
 
     get("/heros", (request, response) -> {
      Map<String, Object> model = new HashMap<String, Object>();
@@ -85,5 +85,38 @@ public class App {
 			return new ModelAndView(model, layout);
 		}, new VelocityTemplateEngine());
 
+    get("squads/:id/heroes/new", (request, response) -> {
+			Map<String, Object> model = new HashMap<String, Object>();
+			Squad squad = Squad.find(Integer.parseInt(request.params(":id")));
+			model.put("squad", squad);
+			model.put("template", "templates/hero-form.vtl");
+			return new ModelAndView(model, layout);
+		}, new VelocityTemplateEngine());
+
+
+		get("squads/:id/heroes/new", (request, response) -> {
+			Map<String, Object> model = new HashMap<String, Object>();
+			Squad squad = Squad.find(Integer.parseInt(request.params(":id")));
+			model.put("squad", squad);
+			model.put("template", "templates/hero-form.vtl");
+			return new ModelAndView(model, layout);
+		}, new VelocityTemplateEngine());
+
+    post("/heroes", (request, response) -> {
+			Map<String, Object> model = new HashMap<String, Object>();
+			Integer squadId = Integer.parseInt(request.queryParams("squadId"));
+			Squad squad = Squad.find(squadId);
+			//params from heroes form
+			String name = request.queryParams("name");
+			int age = Integer.parseInt(request.queryParams("age"));
+			String strength = request.queryParams("strength");
+			String weakness = request.queryParams("weakness");
+			Hero newHero = new Hero(name, age, strength, weakness);
+			squad.addHero(newHero);
+
+			model.put("squad", squad);
+			response.redirect("/squads/" + squadId);
+			return new ModelAndView(model, layout);
+		}, new VelocityTemplateEngine());
   }
 }
