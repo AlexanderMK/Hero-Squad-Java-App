@@ -1,19 +1,11 @@
-<div class="header">
-	<h1>$squad.getName():</h1>
-<div>
-<p>slogan:$squad.getReason() <br>Maximum size:$squad.getMaximumSize();
+<h1>$squad.getName() heros</h1>
 
 <ul>
-	#foreach($hero in $squad.getHeroes())
-		<li>
-			<h5>$hero.getName()</h5>
-			<h5>$hero.getAge()</h5>
-			<h5>$hero.getAbility()</h5>
-			<h5>$hero.getWeakness()</h5>
-		</li>
-	#end
+  #foreach($hero in $squad.getHeros())
+   <li>$hero.getName()</li>
+  #end
 </ul>
 
-<p><a ="/squads/$squad.getId()/heroes/new">Add a Hero to this team</a></p>
-
-<p><a href="/squads">All Squads</a></p>
+<ul>
+	<li><a href="/squads/$squad.getId()/heroes/new">Add a Hero to this team</a></li>
+	<li><a href="/squads">All Squads</a></li>
