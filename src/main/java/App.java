@@ -91,7 +91,7 @@ public class App {
 			model.put("squad", squad);
 			model.put("template", "templates/hero-form.vtl");
 			return new ModelAndView(model, layout);
-		},  VelocityTemplateEngine());
+		}, new VelocityTemplateEngine());
 
 
 		get("squads/:id/heroes/new", (request, response) -> {
@@ -111,7 +111,7 @@ public class App {
 			int age = Integer.parseInt(request.queryParams("age"));
 			String strength = request.queryParams("strength");
 			String weakness = request.queryParams("weakness");
-			Hero newHero = new Hero(name, age, strength, weakness);
+			He newHero = new Hero(name, age, strength, weakness);
 			squad.addHero(newHero);
 
 			model.put("squad", squad);
