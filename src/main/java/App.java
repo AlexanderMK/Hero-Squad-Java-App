@@ -91,7 +91,7 @@ public class App {
 			model.put("squad", squad);
 			model.put("template", "templates/hero-form.vtl");
 			return new ModelAndView(model, layout);
-		}, new VelocityTemplateEngine());
+		},  VelocityTemplateEngine());
 
 
 		get("squads/:id/heroes/new", (request, response) -> {
