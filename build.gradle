@@ -1,9 +1,9 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-archivesBaseName = "to-do"
+archivesBaseName = "hero-squad"
 version = '1.0'
-applicationName = "herosquad"
+applicationName = "hero-squad"
 mainClassName = "App"
 
 repositories {
