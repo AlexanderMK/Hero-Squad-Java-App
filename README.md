@@ -1,6 +1,6 @@
 # Squad
 
-#### _Fight for a Cause! Heroes Unite! 
+#### Fight for a Cause! Heroes Unite! 
 
 #### By **Alexander MK** 
 
