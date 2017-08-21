@@ -19,7 +19,7 @@ Then, navigate to localhost:4567 in the web browser of your choice.
 
 ## Support and contact details
 
-Please feel free to contact sheenanick@gmail.com if you have any issues or questions, ideas or concerns.
+Please feel free to contact mburukungu@gmail.com if you have any issues or questions, ideas or concerns.
 
 ## Technologies Used
 
