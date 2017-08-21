@@ -111,12 +111,22 @@ public class App {
 			int age = Integer.parseInt(request.queryParams("age"));
 			String strength = request.queryParams("strength");
 			String weakness = request.queryParams("weakness");
-			He newHero = new Hero(name, age, strength, weakness);
+			Hero newHero = new Hero(name, age, strength, weakness);
 			squad.addHero(newHero);
 
 			model.put("squad", squad);
 			response.redirect("/squads/" + squadId);
 			return new ModelAndView(model, layout);
 		}, new VelocityTemplateEngine());
+
+    ProcessBuilder process = new ProcessBuilder();
+     Integer port;
+     if (process.environment().get("PORT") != null) {
+         port = Integer.parseInt(process.environment().get("PORT"));
+     } else {
+         port = 4567;
+     }
+
+    setPort(port);
   }
 }

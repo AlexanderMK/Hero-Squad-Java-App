@@ -1,0 +1,19 @@
+.jumbotron {
+      background-image: url('https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwif1q_isOPVAhXLQ48KHTAyA_YQjRwIBw&url=https%3A%2F%2Fwallpaper.pictranslator.com%2Fjustice-league-wall-paper%2F&psig=AFQjCNH8lueZX_qm3Kab3OL8gi8j2MAvZw&ust=1503234939884095');
+      background-size:cover;
+      background-repeat:no-repeat
+}
+.jumbotron h1 {
+      font-weight: bold;
+}
+.bigger {
+      margin-top: -4px;
+      font-size: 150%;
+}
+.blue2 {
+      color: #8C84BF;
+}
+.green2 {
+      color: #02A10F;
+
+}

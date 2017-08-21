@@ -47,6 +47,10 @@ public class Squad {
     return mId;
   }
 
+  public static Squad find(int id) {
+    return instances.get(id - 1);
+  }
+
   //returns a list of heroes in a squad
   public List<Hero> getHeros() {
     return mHeros;
