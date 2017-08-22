@@ -1,8 +1,8 @@
-# Squad
+# Squad https://hero-squad-java-app.herokuapp.com/
 
-#### Fight for a Cause! Heroes Unite! 
+#### Fight for a Cause! Heroes Unite!
 
-#### By **Alexander MK** 
+#### By **Alexander MK**
 
 ## Description
 This is a program where the user can create squads and populate each squad with four heroes.
